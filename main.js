@@ -7,7 +7,8 @@ class App extends React.Component {
     return(
       <div id="app">
         <NavBar />
-        <HomeSection />
+        <HomeComponent />
+        <ProjectsComponent />
       </div>
     )
   }
@@ -26,9 +27,15 @@ const NavBar = (props) => {
   )
 }
 
-const HomeSection = () =>{
+const HomeComponent = () =>{
   return (
     <h1>Hello World</h1>
+  )
+}
+
+const ProjectsComponent = () =>{
+  return (
+    <h1>These are my Projects</h1>
   )
 }
 
