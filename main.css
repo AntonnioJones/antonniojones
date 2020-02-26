@@ -1,15 +1,13 @@
 body {
   display: block;
-  background-color: gray;
 }
 body a {
-  color: white;
+  color: blue;
 }
 body a:hover {
   text-decoration: none;
 }
 body #mainHeader {
-  box-shadow: 1px 5px 5px red;
   height: auto;
 }
 body #mainHeader #nav-section {
@@ -24,7 +22,22 @@ body #mainHeader #nav-section ul {
 body #mainHeader #nav-section ul li {
   padding: 5px;
   display: inline;
-  font-size: 20px;
+  font-size: 21px;
+}
+body #projectsSection {
+  text-align: center;
+}
+body #projectsSection #project-grid {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+body #projectsSection #project-grid #project-card {
+  background-color: #E6ECF8;
+  border: 2px solid blue;
+  margin-top: 8px;
+  box-shadow: 0px 2px 5px gray;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,10 @@
 body {
   //Styling for the overall app ->
   display: block;
-  background-color: gray;
 
 //reset style for all links
 a{
-  color: white;
+  color: blue;
 }
 
 a:hover{
@@ -13,10 +12,10 @@ a:hover{
 }
 //The navigation section
   #mainHeader{
-    box-shadow: 1px 5px 5px red;
     height:auto;
      #nav-section {
        justify-content:flex-end;
+
       ul {
         display:inline-block;
         list-style-type: none;
@@ -26,13 +25,31 @@ a:hover{
         li{
           padding:5px;
           display:inline;
-          font-size: 20px;
+          font-size: 21px;
         }
       }
     }
   }
 
   #homeSection{
-    
+
+  }
+
+  #projectsSection{
+    text-align: center;
+
+    #project-grid{
+      text-align: center;
+      display: grid;
+      justify-content: center;
+
+      #project-card{
+        background-color: #E6ECF8;
+        border: 2px solid blue;
+        margin-top:8px;
+        box-shadow: 0px 2px 5px gray;
+        padding: 5px;
+      }
+    }
   }
 }

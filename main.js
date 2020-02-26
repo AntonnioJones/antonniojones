@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 }
 
-const NavBar = (props) => {
+const NavBar = () => {
   return (
   <nav id="nav-section">
     <ul>
@@ -43,17 +43,42 @@ const ProjectsComponent = () =>{
   return (
     <section id="projectsSection">
       <h1>These are my Projects</h1>
+      <article id="project-grid">
+        <ProjectCard title="Social App"/>
+        <ProjectCard title="Todo App" />
+        <ProjectCard title="Drumpad" />
+      </article>
     </section>
   )
+}
+
+class ProjectCard extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+      <section id="project-card" class="container-lg">
+        <header><h3>{this.props.title}</h3></header>
+        <p>This is a summary of the project and
+        the technology stack i used to create it
+        </p>
+        <a href="https://codepen.io/antonniojones/full/YzXyvwN" target="_blank">
+          <button type="button" class="btn btn-primary">Visit</button>
+        </a>
+      </section>
+    )
+  }
 }
 
 const ContactComponent = () =>{
   return (
     <section id="contactSection">
       <ul>
-        <li>Email</li>
-        <li>Linkedin</li>
-        <li>Github</li>
+        <li><a href="#">Email <i class="fas fa-envelope-square"></i></a></li>
+        <li><a>Linkedin<i class="fab fa-linkedin"></i></a></li>
+        <li><a>Github<i class="fab fa-github"></i></a></li>
       </ul>
     </section>
   )
