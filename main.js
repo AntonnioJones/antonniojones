@@ -7,11 +7,11 @@ class App extends React.Component {
     return(
       <div id="app">
         <header id="mainHeader">
+          <h1>Antonnio Jones</h1>
           <NavBar />
         </header>
-        <HomeComponent />
-        <ProjectsComponent />
-        <ContactComponent />
+        {/*<HomeComponent />*/}
+
       </div>
     )
   }
@@ -23,6 +23,7 @@ const NavBar = () => {
     <ul>
       <li><a href="#homeSection">Home</a></li>
       <li><a href="#projectsSection">Projects</a></li>
+      <li><a href="#skillsSection">Skills</a></li>
       <li><a href="#contactSection">Contact</a></li>
     </ul>
   </nav>
@@ -32,7 +33,7 @@ const NavBar = () => {
 const HomeComponent = () =>{
   return (
     <section id="homeSection">
-      <h1>Hello, My name is Antonnio Jones</h1>
+
       <h2>I am a front-end developer</h2>
       <p>I specialize in React </p>
     </section>

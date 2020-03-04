@@ -1,43 +1,27 @@
 body {
   display: block;
+  background-image: url("Imagesmilky-way.jpg");
+  font-family: "Arial Black", Gadget, sans-serif;
 }
 body a {
-  color: blue;
-}
-body a:hover {
+  color: black;
   text-decoration: none;
 }
+body a:hover {
+  text-decoration: underline;
+  color: #4169E1;
+}
 body #mainHeader {
-  height: auto;
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
 }
-body #mainHeader #nav-section {
-  justify-content: flex-end;
-}
-body #mainHeader #nav-section ul {
+body #mainHeader #nav-section li {
+  margin-left: 10px;
   display: inline-block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-body #mainHeader #nav-section ul li {
-  padding: 5px;
-  display: inline;
-  font-size: 21px;
-}
-body #projectsSection {
-  text-align: center;
-}
-body #projectsSection #project-grid {
-  text-align: center;
-  display: grid;
-  justify-content: center;
-}
-body #projectsSection #project-grid #project-card {
-  background-color: #E6ECF8;
-  border: 2px solid blue;
-  margin-top: 8px;
-  box-shadow: 0px 2px 5px gray;
-  padding: 5px;
+  font-size: 26px;
 }
 
 /*# sourceMappingURL=main.css.map */
