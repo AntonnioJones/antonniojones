@@ -10,8 +10,9 @@ class App extends React.Component {
           <h1>Antonnio Jones</h1>
           <NavBar />
         </header>
-        {/*<HomeComponent />*/}
-
+        <main id="mainComponents">
+          <HomeComponent />
+        </main>
       </div>
     )
   }
@@ -42,14 +43,14 @@ const HomeComponent = () =>{
 
 const ProjectsComponent = () =>{
   return (
-    <section id="projectsSection">
+    <article id="projectsSection">
       <h1>These are my Projects</h1>
-      <article id="project-grid">
+      <section id="project-grid">
         <ProjectCard title="Social App"/>
         <ProjectCard title="Todo App" />
         <ProjectCard title="Drumpad" />
-      </article>
-    </section>
+      </section>
+    </article>
   )
 }
 
