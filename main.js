@@ -1,3 +1,4 @@
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -31,14 +32,38 @@ const NavBar = () => {
   )
 }
 
-const HomeComponent = () =>{
-  return (
-    <section id="homeSection">
+const FadeInSection = posed.section({
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 800,
+       ease: 'easeIn'
+    }
+  }
+});
 
-      <h2>I am a front-end developer</h2>
-      <p>I specialize in React </p>
-    </section>
+class HomeComponent extends React.Component{
+
+   state = { isVisible: false };
+
+  componentDidMount() {
+    this.setState({ isVisible: !this.state.isVisible });
+  }
+
+  render(){
+  return (
+    <FadeInSection id="homeSection" pose={this.state.isVisible ? 'visible' : 'hidden'}>
+      <h1>Front-end Developer</h1>
+      <p>Helping start-ups, small businesses, and agencies achieve </p>
+      <p>high quality websites and exceptional user experience </p>
+      <div id="changeComponents">
+        <i className="fa fa-arrow-left"></i>
+        <i className="fa fa-arrow-right"></i>
+      </div>
+    </FadeInSection>
   )
+  }
 }
 
 const ProjectsComponent = () =>{
