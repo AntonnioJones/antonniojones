@@ -4,74 +4,41 @@ body{
 }
 
 #app {
-  //Styling for the overall app ->
-  display: grid;
-  background-color:   #2098D1;
-  grid-template-rows: 7% 93%;
-  margin:0px;
-  padding-top: 0px;
-  height:100vh;
-  width: 100vw;
-  font-family: "Arial Black", Gadget, sans-serif;
-  color:white;
 
   #mainHeader{
-    display:inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 16px;
-    align-items: center;
-    h1{
-      margin: 0px;
 
-    }
 
     #nav-section{
-      height: 100%;
+      display:flex;
 
-      ul{
-        list-style: none;
-        margin:0px;
-        height: 100%;
-        text-align: center;
-        padding:0px;
-        li{
-          height: 100%;
-          display: inline-flex;
-          flex-flow: row nowrap;
-          align-items: center;
-          text-align: center;
-          padding-right: 7px;
-          padding-left: 7px;
-        }
+      justify-content: space-between;
+      h1{
+        font-size: 28px;
       }
+
       a{
-        text-decoration: none;
-        color:white;
-      }
 
-      a:hover{
-        color:black ;
-      }
-
-      li:hover{
-        background-color: rgba(213, 219, 219,0.5);
       }
     }
   }
 
   #mainComponents{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: height 500ms 0ms, opacity 500ms 500ms;
-  }
+    padding: 0px;
 
-  #changeComponents{
-    i{
-      margin: 10px;
+    #homeSection{
+      height: 100vh;
+      text-align: center;
+      padding-left: 30%;
+      color:white;
+      background: linear-gradient(110deg, #85C1E9  60%, #3498DB 60%);
+      padding-top:10%;
     }
+
+    #projectsSection{
+      height: 100vh;
+      padding-top: 20vh;
+    }
+
   }
 
 }

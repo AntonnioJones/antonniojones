@@ -8,11 +8,12 @@ class App extends React.Component {
     return(
       <div id="app">
         <header id="mainHeader">
-          <h1>Antonnio Jones</h1>
           <NavBar />
         </header>
-        <main id="mainComponents">
+        <main id="mainComponents" className="container-fluid">
           <HomeComponent />
+          <ProjectsComponent />
+          <ContactComponent />
         </main>
       </div>
     )
@@ -21,17 +22,19 @@ class App extends React.Component {
 
 const NavBar = () => {
   return (
-  <nav id="nav-section">
-    <ul>
-      <li><a href="#homeSection">Home</a></li>
-      <li><a href="#projectsSection">Projects</a></li>
-      <li><a href="#skillsSection">Skills</a></li>
-      <li><a href="#contactSection">Contact</a></li>
+  <nav id="nav-section" className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h1 className="navbar-brand">Antonnio Jones</h1>
+    <ul className="navbar-nav">
+      <li className="nav-item"><a href="#homeSection" className="nav-link">Home</a></li>
+      <li className="nav-item"><a href="#projectsSection" className="nav-link">Projects</a></li>
+      <li className="nav-item"><a href="#skillsSection" className="nav-link">Skills</a></li>
+      <li className="nav-item"><a href="#contactSection" className="nav-link">Contact</a></li>
     </ul>
   </nav>
   )
 }
 
+//a posed section that fades in a section
 const FadeInSection = posed.section({
   hidden: { opacity: 0 },
   visible: {
@@ -53,22 +56,23 @@ class HomeComponent extends React.Component{
 
   render(){
   return (
-    <FadeInSection id="homeSection" pose={this.state.isVisible ? 'visible' : 'hidden'}>
-      <h1>Front-end Developer</h1>
-      <p>Helping start-ups, small businesses, and agencies achieve </p>
-      <p>high quality websites and exceptional user experience </p>
-      <div id="changeComponents">
-        <i className="fa fa-arrow-left"></i>
-        <i className="fa fa-arrow-right"></i>
-      </div>
-    </FadeInSection>
+    <div id="homeSection" className="col align-self-center">
+        <h1>Front-end Developer</h1>
+        <img src="" alt="A picture of me"></img>
+        <p>Helping start-ups, small businesses, and agencies achieve </p>
+        <p>high quality websites and exceptional user experience </p>
+    </div>
   )
   }
 }
 
+class SkillsComponent extends React.Component{
+
+}
+
 const ProjectsComponent = () =>{
   return (
-    <article id="projectsSection">
+    <article id="projectsSection" className="col">
       <h1>These are my Projects</h1>
       <section id="project-grid">
         <ProjectCard title="Social App"/>
@@ -86,13 +90,13 @@ class ProjectCard extends React.Component{
 
   render(){
     return(
-      <section id="project-card" class="container-lg">
+      <section id="project-card" className="container-lg">
         <header><h3>{this.props.title}</h3></header>
         <p>This is a summary of the project and
         the technology stack i used to create it
         </p>
         <a href="https://codepen.io/antonniojones/full/YzXyvwN" target="_blank">
-          <button type="button" class="btn btn-primary">Visit</button>
+          <button type="button" className="btn btn-primary">Visit</button>
         </a>
       </section>
     )
@@ -101,11 +105,11 @@ class ProjectCard extends React.Component{
 
 const ContactComponent = () =>{
   return (
-    <section id="contactSection">
+    <section id="contactSection" className="col">
       <ul>
-        <li><a href="#">Email <i class="fas fa-envelope-square"></i></a></li>
-        <li><a>Linkedin<i class="fab fa-linkedin"></i></a></li>
-        <li><a>Github<i class="fab fa-github"></i></a></li>
+        <li><a href="#">Email <i className="fas fa-envelope-square"></i></a></li>
+        <li><a>Linkedin<i className="fab fa-linkedin"></i></a></li>
+        <li><a>Github<i className="fab fa-github"></i></a></li>
       </ul>
     </section>
   )
