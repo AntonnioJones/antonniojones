@@ -23,7 +23,21 @@ body {
 }
 #app #mainComponents #projectsSection {
   height: 100vh;
-  padding-top: 20vh;
+  text-align: center;
+  vertical-align: middle;
+}
+#app #mainComponents #projectsSection .container {
+  height: 100%;
+}
+#app #mainComponents #projectsSection h1 {
+  padding-top: 20px;
+}
+#app #mainComponents #projectsSection .card img {
+  height: 180px;
+}
+#app #mainComponents #contactSection {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

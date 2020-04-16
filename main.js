@@ -73,12 +73,14 @@ class SkillsComponent extends React.Component{
 const ProjectsComponent = () =>{
   return (
     <article id="projectsSection" className="col">
-      <h1>These are my Projects</h1>
-      <section id="project-grid">
+      <div className="container">
+      <h1>Projects</h1>
+      <div className="row">
         <ProjectCard title="Social App"/>
         <ProjectCard title="Todo App" />
         <ProjectCard title="Drumpad" />
-      </section>
+      </div>
+      </div>
     </article>
   )
 }
@@ -90,28 +92,33 @@ class ProjectCard extends React.Component{
 
   render(){
     return(
-      <section id="project-card" className="container-lg">
-        <header><h3>{this.props.title}</h3></header>
-        <p>This is a summary of the project and
-        the technology stack i used to create it
-        </p>
-        <a href="https://codepen.io/antonniojones/full/YzXyvwN" target="_blank">
-          <button type="button" className="btn btn-primary">Visit</button>
-        </a>
-      </section>
+      <div className="col-md-4">
+        <div className="card box-shadow text-center">
+          <img className="card-img-top" src="images/todoApp.png" alt="Card image cap"></img>
+          <div className="card-body">
+            <h3 className="card-title">{this.props.title}</h3>
+            <p className="card-text">This is a summary of the project and
+            the technology stack i used to create it
+            </p>
+            <a href="https://codepen.io/antonniojones/full/YzXyvwN" target="_blank">
+              <button type="button" className="btn btn-primary">Visit</button>
+            </a>
+          </div>
+        </div>
+      </div>
     )
   }
 }
 
 const ContactComponent = () =>{
   return (
-    <section id="contactSection" className="col">
-      <ul>
-        <li><a href="#">Email <i className="fas fa-envelope-square"></i></a></li>
-        <li><a>Linkedin<i className="fab fa-linkedin"></i></a></li>
-        <li><a>Github<i className="fab fa-github"></i></a></li>
+    <footer id="contactSection" className="col border-top navbar navbar-expand-lg">
+      <ul className="navbar-nav">
+        <li className="nav-item"><a className="nav-link" href="mailto:antonnioj3@example.com?Subject=Hello%20again">Email <i className="fa fa-envelope-square"></i></a></li>
+        <li className="nav-item"><a className="nav-link" href="https://www.linkedin.com/in/antonnio-jones-2ab8607b/">Linkedin<i className="fa fa-linkedin"></i></a></li>
+        <li className="nav-item"><a className="nav-link" href="https://github.com/AntonnioJones">Github<i className="fa fa-github"></i></a></li>
       </ul>
-    </section>
+    </footer>
   )
 }
 
