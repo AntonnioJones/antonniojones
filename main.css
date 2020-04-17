@@ -35,6 +35,13 @@ body {
 #app #mainComponents #projectsSection .card img {
   height: 180px;
 }
+#app #mainComponents #skillsSection {
+  height: 100vh;
+}
+#app #mainComponents #skillsSection #progressbars label {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
 #app #mainComponents #contactSection {
   display: flex;
   justify-content: center;

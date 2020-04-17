@@ -13,6 +13,7 @@ class App extends React.Component {
         <main id="mainComponents" className="container-fluid">
           <HomeComponent />
           <ProjectsComponent />
+          <SkillsComponent />
           <ContactComponent />
         </main>
       </div>
@@ -58,7 +59,6 @@ class HomeComponent extends React.Component{
   return (
     <div id="homeSection" className="col align-self-center">
         <h1>Front-end Developer</h1>
-        <img src="" alt="A picture of me"></img>
         <p>Helping start-ups, small businesses, and agencies achieve </p>
         <p>high quality websites and exceptional user experience </p>
     </div>
@@ -67,7 +67,55 @@ class HomeComponent extends React.Component{
 }
 
 class SkillsComponent extends React.Component{
-
+  render(){
+    return(
+      <div className="container border-top" id="skillsSection">
+        <h1>Skills and Tools</h1>
+        <div id="progressbars">
+          <label>HTML</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "96%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">96%</div>
+          </div>
+          <label>CSS/SASS</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "95%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+          </div>
+          <label>Javascript</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "90%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+          <label>BootStrap</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "90%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+          <label>Algorithms and Data Structures</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "85%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+          <label>REACT</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "80%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+          <label>D3.js</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "65%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+          </div>
+          <label>Mongodb/NoSQL</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "60%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+          <label>Node</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "50%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+          <label>Express</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "50%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 const ProjectsComponent = () =>{
@@ -76,9 +124,9 @@ const ProjectsComponent = () =>{
       <div className="container">
       <h1>Projects</h1>
       <div className="row">
-        <ProjectCard title="Social App"/>
-        <ProjectCard title="Todo App" />
-        <ProjectCard title="Drumpad" />
+        <ProjectCard title="Quote Generator" link="https://codepen.io/antonniojones/full/GRJgabL" imgLink="images/randomQuoteGenerator.png"/>
+        <ProjectCard title="Education Map" link="https://codepen.io/antonniojones/full/xxGJyWE" imgLink="images/educationmap.png"/>
+        <ProjectCard title="Todo App" link="todoapp.index.html" imgLink="images/todoapp.png"/>
       </div>
       </div>
     </article>
@@ -94,13 +142,13 @@ class ProjectCard extends React.Component{
     return(
       <div className="col-md-4">
         <div className="card box-shadow text-center">
-          <img className="card-img-top" src="images/todoApp.png" alt="Card image cap"></img>
-          <div className="card-body">
+          <img className="card-img-top" src={this.props.imgLink} alt="Card image cap"></img>
+          <div className="card-body border-top">
             <h3 className="card-title">{this.props.title}</h3>
             <p className="card-text">This is a summary of the project and
             the technology stack i used to create it
             </p>
-            <a href="https://codepen.io/antonniojones/full/YzXyvwN" target="_blank">
+            <a href={this.props.link} target="_blank">
               <button type="button" className="btn btn-primary">Visit</button>
             </a>
           </div>

@@ -53,6 +53,17 @@ body{
       }
     }
 
+    #skillsSection{
+      height:100vh;
+      #progressbars{
+
+        label{
+          margin-top: 10px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
     #contactSection{
       display:flex;
       justify-content: center;
