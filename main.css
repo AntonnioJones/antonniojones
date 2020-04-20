@@ -30,6 +30,9 @@ body {
   vertical-align: middle;
   padding-top: 20vh;
 }
+#app #mainComponents #projectsSection #ProjectCard {
+  padding-bottom: 10px;
+}
 #app #mainComponents #projectsSection .container {
   height: 100%;
 }
@@ -42,13 +45,15 @@ body {
 #app #mainComponents #skillsSection {
   height: 100vh;
   padding-top: 20vh;
+  position: relative;
 }
 #app #mainComponents #skillsSection #progressbars label {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 #app #mainComponents #contactSection {
-  display: flex;
+  display: inline-flex;
+  position: relative;
   justify-content: center;
 }
 

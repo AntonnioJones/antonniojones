@@ -5,6 +5,8 @@ body{
 
 #app {
 
+
+
   #mainHeader{
 
 
@@ -43,6 +45,11 @@ body{
       text-align: center;
       vertical-align:middle;
       padding-top: 20vh;
+
+      #ProjectCard{
+        padding-bottom: 10px;
+      }
+
       .container{
         height: 100%;
       }
@@ -60,17 +67,19 @@ body{
     #skillsSection{
       height:100vh;
       padding-top: 20vh;
+      position: relative;
       #progressbars{
 
         label{
           margin-top: 10px;
-          margin-bottom: 0px;
+          margin-bottom: 10px;
         }
       }
     }
 
     #contactSection{
-      display:flex;
+      display:inline-flex;
+      position: relative;
       justify-content: center;
       #contactLinks{
 
