@@ -5,6 +5,7 @@ body {
 
 #app #mainHeader #nav-section {
   display: flex;
+  position: fixed;
   justify-content: space-between;
 }
 #app #mainHeader #nav-section h1 {
@@ -18,13 +19,16 @@ body {
   text-align: center;
   padding-left: 30%;
   color: white;
-  background: linear-gradient(110deg, #85C1E9 60%, #3498DB 60%);
+  background-image: url("images/background.png");
+  background-size: cover;
   padding-top: 10%;
+  background: linear-gradient(110deg, #85C1E9 60%, #3498DB 60%);
 }
 #app #mainComponents #projectsSection {
   height: 100vh;
   text-align: center;
   vertical-align: middle;
+  padding-top: 20vh;
 }
 #app #mainComponents #projectsSection .container {
   height: 100%;
@@ -37,6 +41,7 @@ body {
 }
 #app #mainComponents #skillsSection {
   height: 100vh;
+  padding-top: 20vh;
 }
 #app #mainComponents #skillsSection #progressbars label {
   margin-top: 10px;

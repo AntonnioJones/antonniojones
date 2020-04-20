@@ -8,7 +8,7 @@ class App extends React.Component {
     return(
       <div id="app">
         <header id="mainHeader">
-          <NavBar />
+          <NavBar/>
         </header>
         <main id="mainComponents" className="container-fluid">
           <HomeComponent />
@@ -19,20 +19,6 @@ class App extends React.Component {
       </div>
     )
   }
-}
-
-const NavBar = () => {
-  return (
-  <nav id="nav-section" className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <h1 className="navbar-brand">Antonnio Jones</h1>
-    <ul className="navbar-nav">
-      <li className="nav-item"><a href="#homeSection" className="nav-link">Home</a></li>
-      <li className="nav-item"><a href="#projectsSection" className="nav-link">Projects</a></li>
-      <li className="nav-item"><a href="#skillsSection" className="nav-link">Skills</a></li>
-      <li className="nav-item"><a href="#contactSection" className="nav-link">Contact</a></li>
-    </ul>
-  </nav>
-  )
 }
 
 //a posed section that fades in a section
@@ -47,6 +33,60 @@ const FadeInSection = posed.section({
   }
 });
 
+//posed parent
+const Move = posed.div({
+  transition :{
+    type: 'physics',
+    velocity: 1000
+  }
+});
+
+//posed NavBar
+const PopBar = posed.nav({
+  open: { y: '0%', staggerChildren: 100,transition :{
+    duration: 400,
+    ease: 'linear'
+  } },
+  closed: {y: '-100%',}
+})
+
+const PopItem = posed.li({
+  open: { opacity: 1 },
+  closed: { opacity: 0 },
+})
+
+class NavBar extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  render(){
+    return (
+      <div className="container">
+    <PopBar id="nav-section" className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" pose={this.state.isOpen ? 'open' : 'closed'}>
+      <h1 className="navbar-brand">Antonnio Jones</h1>
+      <ul className="navbar-nav">
+        <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#homeSection" className="nav-link">Home</a></PopItem>
+        <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#projectsSection" className="nav-link">Projects</a></PopItem>
+        <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#skillsSection" className="nav-link">Skills</a></PopItem>
+        <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#contactSection" className="nav-link">Contact</a></PopItem>
+      </ul>
+    </PopBar>
+    </div>
+    )
+  }
+}
+
+
+
 class HomeComponent extends React.Component{
 
    state = { isVisible: false };
@@ -58,19 +98,28 @@ class HomeComponent extends React.Component{
   render(){
   return (
     <div id="homeSection" className="col align-self-center">
+      <FadeInSection pose={this.state.isVisible ? 'visible' : 'hidden'}>
         <h1>Welcome to my portfolio</h1>
         <p>I am a software developer that specalizes in front end development.</p>
         <p>I enjoy game development, building web applications, and learning new skills</p>
         <p>Scroll down to checkout some of my work, view my skills, or to contact me</p>
+      </FadeInSection>
     </div>
   )
   }
 }
 
 class SkillsComponent extends React.Component{
+
+  state={isVisible: false};
+
+  componentDidMount() {
+    this.setState({ isVisible: !this.state.isVisible });
+  }
+
   render(){
     return(
-      <div className="container border-top" id="skillsSection">
+      <FadeInSection className="container border-top" id="skillsSection" pose={this.state.isVisible ? 'visible' : 'hidden'}>
         <h1>Skills and Tools</h1>
         <div id="progressbars">
           <label>HTML</label>
@@ -114,7 +163,7 @@ class SkillsComponent extends React.Component{
             <div className="progress-bar" role="progressbar" style={{width: "50%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
     )
   }
 }
