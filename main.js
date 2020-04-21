@@ -182,7 +182,7 @@ const ProjectsComponent = () =>{
       <div className="row">
         <ProjectCard title="Quote Generator" link="https://codepen.io/antonniojones/full/GRJgabL" imgLink="images/randomQuoteGenerator.png"/>
         <ProjectCard title="Education Map" link="https://codepen.io/antonniojones/full/xxGJyWE" imgLink="images/educationmap.png"/>
-        <ProjectCard title="Todo App" link="todoapp.index.html" imgLink="images/todoapp.png"/>
+        <ProjectCard title="Todo App" link="todoapp.index.html" imgLink="images/todoApp.png"/>
       </div>
       </div>
     </article>
