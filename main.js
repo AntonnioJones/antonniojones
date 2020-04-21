@@ -198,7 +198,7 @@ class ProjectCard extends React.Component{
     return(
       <div className="col-md-4">
         <div className="card box-shadow text-center">
-          <img className="card-img-top" src={this.props.imgLink} alt="Card image cap"></img>
+          <img className="card-img-top" src={this.props.imgLink} alt={`${this.props.title} image`}></img>
           <div className="card-body border-top">
             <h3 className="card-title">{this.props.title}</h3>
             <p className="card-text">This is a summary of the project and
