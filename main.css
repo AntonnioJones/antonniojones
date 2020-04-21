@@ -3,13 +3,8 @@ body {
   margin: 0px;
 }
 
-#app #mainHeader #nav-section {
-  display: flex;
-  position: fixed;
-  justify-content: space-between;
-}
-#app #mainHeader #nav-section h1 {
-  font-size: 28px;
+#app #mainHeader {
+  width: 100%;
 }
 #app #mainComponents {
   padding: 0px;
@@ -24,37 +19,42 @@ body {
   padding-top: 10%;
   background: linear-gradient(110deg, #85C1E9 60%, #3498DB 60%);
 }
-#app #mainComponents #projectsSection {
-  height: 100vh;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 20vh;
-}
-#app #mainComponents #projectsSection #ProjectCard {
-  padding-bottom: 10px;
-}
-#app #mainComponents #projectsSection .container {
-  height: 100%;
-}
-#app #mainComponents #projectsSection h1 {
-  padding-top: 20px;
-}
-#app #mainComponents #projectsSection .card img {
-  height: 180px;
-}
-#app #mainComponents #skillsSection {
-  height: 100vh;
-  padding-top: 20vh;
-  position: relative;
-}
-#app #mainComponents #skillsSection #progressbars label {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 #app #mainComponents #contactSection {
   display: inline-flex;
-  position: relative;
   justify-content: center;
+}
+
+@media (min-width: 300px) {
+  #projectsSection {
+    height: auto;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #projectsSection .card {
+    margin-bottom: 10px;
+  }
+
+  #skillsSection {
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 1024px) {
+  #projectsSection {
+    height: 100vh;
+    text-align: center;
+  }
+  #projectsSection h1 {
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+  #projectsSection .card img {
+    height: 200px;
+  }
+
+  #skillsSection {
+    height: 100vh;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

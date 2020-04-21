@@ -5,24 +5,8 @@ body{
 
 #app {
 
-
-
   #mainHeader{
-
-
-    #nav-section{
-      display:flex;
-      position: fixed;
-
-      justify-content: space-between;
-      h1{
-        font-size: 28px;
-      }
-
-      a{
-
-      }
-    }
+    width: 100%;
   }
 
   #mainComponents{
@@ -40,52 +24,49 @@ body{
 
     }
 
-    #projectsSection{
-      height:100vh;
-      text-align: center;
-      vertical-align:middle;
-      padding-top: 20vh;
-
-      #ProjectCard{
-        padding-bottom: 10px;
-      }
-
-      .container{
-        height: 100%;
-      }
-      h1{
-        padding-top:20px;
-      }
-      .card{
-
-        img{
-          height:180px;
-        }
-      }
-    }
-
-    #skillsSection{
-      height:100vh;
-      padding-top: 20vh;
-      position: relative;
-      #progressbars{
-
-        label{
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-      }
-    }
-
     #contactSection{
       display:inline-flex;
-      position: relative;
       justify-content: center;
-      #contactLinks{
-
-      }
     }
 
   }
 
+}
+//phone layout
+@media(min-width: 300px) {
+  #projectsSection{
+    height: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    .card{
+      margin-bottom: 10px;
+    }
+  }
+
+  #skillsSection{
+    padding-bottom: 5%;
+  }
+}
+//tablets, laptops and pc layout
+@media (min-width: 1024px) {
+  #projectsSection{
+    height: 100vh;
+    text-align: center;
+
+    h1{
+      padding-top: 5%;
+      padding-bottom: 2%;
+    }
+
+    .card{
+        img{
+          height: 200px;
+        }
+    }
+  }
+
+  #skillsSection{
+    height: 100vh;
+    text-align: center;
+  }
 }

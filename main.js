@@ -7,7 +7,7 @@ class App extends React.Component {
   render(){
     return(
       <div id="app">
-        <header id="mainHeader">
+        <header id="mainHeader container">
           <NavBar/>
         </header>
         <main id="mainComponents" className="container-fluid">
@@ -70,13 +70,14 @@ class NavBar extends React.Component {
 
   render(){
     return (
-      <div className="container">
-    <PopBar id="nav-section" className="navbar fixed-top navbar-expand-md navbar-dark bg-dark" pose={this.state.isOpen ? 'open' : 'closed'}>
+    <PopBar id="nav-section" className="navbar navbar-expand-md navbar-dark bg-dark " pose={this.state.isOpen ? 'open' : 'closed'}>
       <h1 className="navbar-brand">Antonnio Jones</h1>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse">
+
+      <div className="collapse navbar-collapse" id="collapsibleNavbar">
         <ul className="navbar-nav">
           <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#homeSection" className="nav-link">Home</a></PopItem>
           <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#projectsSection" className="nav-link">Projects</a></PopItem>
@@ -84,8 +85,8 @@ class NavBar extends React.Component {
           <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#contactSection" className="nav-link">Contact</a></PopItem>
         </ul>
       </div>
+
     </PopBar>
-    </div>
     )
   }
 }
