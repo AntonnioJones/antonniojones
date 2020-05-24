@@ -23,19 +23,23 @@ body {
   display: inline-flex;
   justify-content: center;
 }
+#app #mainComponents #skillsSection {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#app #mainComponents #skillsSection label {
+  margin-top: 2px;
+}
+#app #mainComponents #projectsSection .card img {
+  height: 200px;
+  margin-bottom: 10px;
+}
 
 @media (min-width: 300px) {
   #projectsSection {
     height: auto;
     text-align: center;
     margin-bottom: 10px;
-  }
-  #projectsSection .card {
-    margin-bottom: 10px;
-  }
-
-  #skillsSection {
-    padding-bottom: 5%;
   }
 }
 @media (min-width: 1024px) {
@@ -46,14 +50,6 @@ body {
   #projectsSection h1 {
     padding-top: 5%;
     padding-bottom: 2%;
-  }
-  #projectsSection .card img {
-    height: 200px;
-  }
-
-  #skillsSection {
-    height: 100vh;
-    text-align: center;
   }
 }
 

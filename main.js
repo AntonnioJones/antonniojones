@@ -138,6 +138,10 @@ class SkillsComponent extends React.Component{
           </div>
           <label>Javascript</label>
           <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "93%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">93%</div>
+          </div>
+          <label>REACT</label>
+          <div className="progress" style={{height:"25px"}}>
             <div className="progress-bar" role="progressbar" style={{width: "90%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
           </div>
           <label>BootStrap</label>
@@ -148,23 +152,19 @@ class SkillsComponent extends React.Component{
           <div className="progress" style={{height:"25px"}}>
             <div className="progress-bar" role="progressbar" style={{width: "85%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
           </div>
-          <label>REACT</label>
-          <div className="progress" style={{height:"25px"}}>
-            <div className="progress-bar" role="progressbar" style={{width: "80%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-          <label>D3.js</label>
-          <div className="progress" style={{height:"25px"}}>
-            <div className="progress-bar" role="progressbar" style={{width: "65%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
-          </div>
           <label>Mongodb/NoSQL</label>
           <div className="progress" style={{height:"25px"}}>
-            <div className="progress-bar" role="progressbar" style={{width: "60%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+            <div className="progress-bar" role="progressbar" style={{width: "75%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
           <label>Node</label>
           <div className="progress" style={{height:"25px"}}>
-            <div className="progress-bar" role="progressbar" style={{width: "50%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+            <div className="progress-bar" role="progressbar" style={{width: "60%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
           </div>
           <label>Express</label>
+          <div className="progress" style={{height:"25px"}}>
+            <div className="progress-bar" role="progressbar" style={{width: "60%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+          <label>D3.js</label>
           <div className="progress" style={{height:"25px"}}>
             <div className="progress-bar" role="progressbar" style={{width: "50%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
           </div>
