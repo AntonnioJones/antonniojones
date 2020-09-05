@@ -1,3 +1,7 @@
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Switch = ReactRouter.Switch;
+
 
 class App extends React.Component {
   constructor(props){
@@ -6,17 +10,12 @@ class App extends React.Component {
 
   render(){
     return(
-      <div id="app">
-        <header id="mainHeader container">
-          <NavBar/>
-        </header>
-        <main id="mainComponents" className="container-fluid">
-          <HomeComponent />
-          <ProjectsComponent />
-          <SkillsComponent />
-          <ContactComponent />
-        </main>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/content" component={Content}></Route>
+        </Switch>
+      </Router>
     )
   }
 }
@@ -55,65 +54,7 @@ const PopItem = posed.li({
   closed: { opacity: 0 },
 })
 
-class NavBar extends React.Component {
-  constructor(props){
-    super(props);
 
-    this.state = {
-      isOpen: false
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ isOpen: !this.state.isOpen });
-  }
-
-  render(){
-    return (
-    <PopBar id="nav-section" className="navbar navbar-expand-md navbar-dark bg-dark " pose={this.state.isOpen ? 'open' : 'closed'}>
-      <h1 className="navbar-brand">Antonnio Jones</h1>
-
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul className="navbar-nav">
-          <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#homeSection" className="nav-link">Home</a></PopItem>
-          <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#projectsSection" className="nav-link">Projects</a></PopItem>
-          <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#skillsSection" className="nav-link">Skills</a></PopItem>
-          <PopItem className="nav-item" pose={this.state.isOpen ? 'open' : 'closed'}><a href="#contactSection" className="nav-link">Contact</a></PopItem>
-        </ul>
-      </div>
-
-    </PopBar>
-    )
-  }
-}
-
-
-
-class HomeComponent extends React.Component{
-
-   state = { isVisible: false };
-
-  componentDidMount() {
-    this.setState({ isVisible: !this.state.isVisible });
-  }
-
-  render(){
-  return (
-    <div id="homeSection" className="col align-self-center">
-      <FadeInSection pose={this.state.isVisible ? 'visible' : 'hidden'}>
-        <h1>Welcome to my portfolio</h1>
-        <p>I am a software developer that specalizes in front end development.</p>
-        <p>I enjoy game development, building web applications, and learning new skills</p>
-        <p>Scroll down to checkout some of my work, view my skills, or to contact me</p>
-      </FadeInSection>
-    </div>
-  )
-  }
-}
 
 class SkillsComponent extends React.Component{
 
@@ -172,21 +113,6 @@ class SkillsComponent extends React.Component{
       </FadeInSection>
     )
   }
-}
-
-const ProjectsComponent = () =>{
-  return (
-    <article id="projectsSection" className="col">
-      <div className="container">
-      <h1>Projects</h1>
-      <div className="row">
-        <ProjectCard title="Quote Generator" link="https://codepen.io/antonniojones/full/GRJgabL" imgLink="images/randomQuoteGenerator.png"/>
-        <ProjectCard title="Education Map" link="https://codepen.io/antonniojones/full/xxGJyWE" imgLink="images/educationmap.png"/>
-        <ProjectCard title="Todo App" link="todoapp/index.html" imgLink="images/todoApp.png"/>
-      </div>
-      </div>
-    </article>
-  )
 }
 
 class ProjectCard extends React.Component{
