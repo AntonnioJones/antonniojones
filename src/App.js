@@ -19,7 +19,7 @@ function App() {
        <Grid
         container
         spacing={0}
-        direction="column"
+        direction="row"
         justify="center"
         alignItems="stretch"
         className="container"
