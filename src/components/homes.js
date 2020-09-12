@@ -2,6 +2,7 @@ import React from "react";
 import theme from "../util/theme";
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 
+
 //material UI
 import Button from '@material-ui/core/Button';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -24,7 +25,7 @@ function Home() {
     <Container maxWidth={false} className={classes.container}>
         <h1>Antonnio Jones</h1>
         <h3>A Full Stack Developer</h3>
-        <Button variant="outlined" color="primary">
+        <Button variant="outlined" color="primary" href="#about">
           Learn More <ArrowDownwardIcon> </ArrowDownwardIcon>
         </Button>
         
