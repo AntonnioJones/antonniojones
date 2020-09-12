@@ -8,18 +8,21 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#F1F1F1",
-    paddingTop: 20,
     textAlign: "center",
     minHeight: "100vh",
+    paddingTop: 100
   },
   about: {
+    paddingLeft: 15,
+    paddingRight: 15,
     width: "100%",
-    marginLeft: 30,
-    textAlign: "left"
+  },
+  info: {
+    margin:0
   },
   progressBars:{
     width: "100%",
-      height:15,
+    height:15,
   }
 });
 
@@ -30,7 +33,7 @@ const About = () => {
       container
       className={classes.root}
       direction="row"
-      justify="space-evenly"
+      justify="center"
       alignItems="flex-start"
       id="about"
     >
@@ -40,8 +43,8 @@ const About = () => {
           <img src="https://www.w3schools.com/images/picture.jpg" alt="Profile Picture"></img>
           <div>
             <h4>Education: </h4>
-            <p>Coastal Carolina University: bachlor of science(Computer Science)</p>
-            <p>I'm a full stack developer based in Atlanta, Georgia.
+            <p className={classes.info}>Coastal Carolina University: bachlor of science(Computer Science)</p>
+            <p className={classes.info}>I'm a full stack developer based in Atlanta, Georgia.
              I love creating responsive and dynamic web applications.</p>
           </div>
           <p id="about info"></p>
@@ -72,7 +75,7 @@ const About = () => {
   );
 };
 
-const progressBars = () => {
+const ProgressBars = () => {
 
 }
 

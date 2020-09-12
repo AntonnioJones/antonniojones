@@ -4,6 +4,7 @@ import "./App.css";
 //react pages
 import Home from "./components/homes";
 import About from "./components/about";
+import Portfolio from "./components/portfolio";
 
 //react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
       >
         <Home/>
         <About/>
+        <Portfolio />
       </Grid>
     </MuiThemeProvider>
   );
