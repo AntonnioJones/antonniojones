@@ -6,7 +6,7 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 //material UI
 import Button from '@material-ui/core/Button';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import { Container } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 
 
 const useStyles = makeStyles((theme) => ({

@@ -16,13 +16,14 @@ const useStyles = makeStyles({
     paddingLeft: 15,
     paddingRight: 15,
     width: "100%",
+    textAlign: "left"
   },
   info: {
     margin:0
   },
   progressBars:{
     width: "100%",
-    height:15,
+    height:20,
   }
 });
 
