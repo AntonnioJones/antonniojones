@@ -36,7 +36,6 @@ const Contact = () => {
       <Grid container direction="column" justify="center" alignItems="center">
         <Button
           variant="contained"
-          className={classes.button}
           startIcon={
             <EmailIcon color="primary" className={classes.contactIcon} />
           }
@@ -46,7 +45,6 @@ const Contact = () => {
         </Button>
         <Button
           variant="contained"
-          className={classes.button}
           startIcon={
             <GitHubIcon color="primary" className={classes.contactIcon} />
           }
@@ -56,7 +54,6 @@ const Contact = () => {
         </Button>
         <Button
           variant="contained"
-          className={classes.button}
           startIcon={
             <LinkedInIcon color="primary" className={classes.contactIcon} />
           }
