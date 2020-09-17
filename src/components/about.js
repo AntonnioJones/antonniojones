@@ -5,22 +5,32 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Slide from "@material-ui/core/Slide";
+//react-on-screen
+import TrackVisibility from "react-on-screen";
 
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#F1F1F1",
     textAlign: "center",
     minHeight: "100vh",
+    width: "100%",
     paddingTop: 100,
+    paddingBottom: 50,
+  },
+  tracker: {
+    paddingLeft: 50,
+    paddingRight: 50,
+    width: "100%",
+    textAlign: "left",
+  },
+  labelHeader: {
+    textAlign: "left",
   },
   about: {
     paddingLeft: 15,
     paddingRight: 15,
     width: "100%",
-    textAlign: "left",
-  },
-  info: {
-    margin: 0,
+    textAlign: "center",
   },
   progressBars: {
     width: "100%",
@@ -31,33 +41,37 @@ const useStyles = makeStyles({
 const About = () => {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      className={classes.root}
-      direction="row"
-      justify="center"
-      alignItems="flex-start"
-      id="about"
-    >
-      <ProfileSummary />
-      <ProgressBars />
-    </Grid>
+    <TrackVisibility once partialVisibility className={classes.root}>
+      {({ isVisible }) => (
+        <Grid
+          container
+          className={classes.root}
+          direction="row"
+          justify="center"
+          alignItems="flex-start"
+          id="about"
+        >
+          <ProfileSummary isVisible={isVisible} />
+          <ProgressBars isVisible={isVisible}/>
+        </Grid>
+      )}
+    </TrackVisibility>
   );
 };
 
-const ProfileSummary = () => {
+const ProfileSummary = (props) => {
   const classes = useStyles();
   return (
     <Grid container item xs={12} sm={6}>
       <Slide
         direction="right"
-        in={true}
+        in={props.isVisible}
         timeout={1000}
         mountOnEnter
         unmountOnExit
       >
         <div className={classes.about}>
-          <h1>About</h1>
+          <h1 className={classes.headers}>About</h1>
           <img
             src="https://www.w3schools.com/images/picture.jpg"
             alt="Profile"
@@ -79,7 +93,7 @@ const ProfileSummary = () => {
   );
 };
 
-const ProgressBars = () => {
+const ProgressBars = (props) => {
   const [htmlValue, setHtmlValue] = useState(0);
   const htmlValueLimit = 95;
   const [javascriptValue, setJavascriptValue] = useState(0);
@@ -108,117 +122,133 @@ const ProgressBars = () => {
     };
   });
 
-  const updateProgressBar = () =>{
-    if (htmlValue < htmlValueLimit) {
+  const updateProgressBar = () => {
+    if (htmlValue < htmlValueLimit && props.isVisible) {
       setHtmlValue((value) => {
         return value + 5;
       });
     }
-    
-    if(javascriptValue < javascriptLimit){
+
+    if (javascriptValue < javascriptLimit && props.isVisible) {
       setJavascriptValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(cssValue < cssLimit){
+    if (cssValue < cssLimit && props.isVisible) {
       setCssValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(ReactValue < reactLimit){
+    if (ReactValue < reactLimit && props.isVisible) {
       setReactValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(AlgorithmsValue < AlgorithmsLimit){
+    if (AlgorithmsValue < AlgorithmsLimit && props.isVisible) {
       setAlgorithmsValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(nodeValue < nodeLimit){
+    if (nodeValue < nodeLimit && props.isVisible) {
       setNodeValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(expressValue < expressLimit){
+    if (expressValue < expressLimit && props.isVisible) {
       setExpressValue((value) => {
         return value + 5;
-      })
+      });
     }
 
-    if(mongoValue < mongoLimit){
+    if (mongoValue < mongoLimit && props.isVisible) {
       setMongoValue((value) => {
         return value + 5;
-      })
+      });
     }
-  }
+  };
 
   return (
     <Grid container item xs={12} sm={6}>
       <Slide
         direction="left"
-        in={true}
+        in={props.isVisible}
         timeout={1000}
         mountOnEnter
         unmountOnExit
       >
         <div className={classes.about}>
           <h1>Skills</h1>
-          <label>HTML</label>
+          <label className={classes.labelHeader}>
+            <p>HTML ({htmlValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={htmlValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>Javascript</label>
+          <label className={classes.labelHeader}>
+            <p>Javascript ({javascriptValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={javascriptValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>CSS</label>
+          <label className={classes.labelHeader}>
+            <p>CSS ({cssValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={cssValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>React</label>
+          <label className={classes.labelHeader}>
+            <p>React ({ReactValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={ReactValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>Algorithms & Data Structures</label>
+          <label className={classes.labelHeader}>
+            <p>Algorithms & Data Structures ({AlgorithmsValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={AlgorithmsValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>Node</label>
+          <label className={classes.labelHeader}>
+            <p>Node ({nodeValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={nodeValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>Express</label>
+          <label className={classes.labelHeader}>
+            <p>Express ({expressValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={expressValue}
             variant="determinate"
             className={classes.progressBars}
           />
-          <label>Mongodb</label>
+          <label className={classes.labelHeader}>
+            <p>Mongodb ({mongoValue}%)</p>
+          </label>
           <LinearProgress
             color="primary"
             value={mongoValue}

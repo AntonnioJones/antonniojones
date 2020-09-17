@@ -9,3 +9,8 @@ html {
 .container{
   background-color: aqua;
 }
+
+p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

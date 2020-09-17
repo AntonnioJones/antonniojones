@@ -4,11 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 //material UI
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Slide from "@material-ui/core/Slide";
 
-//fontawesome
+//material icons
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+//react-on-screen
+import TrackVisibility from "react-on-screen";
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +23,7 @@ const useStyles = makeStyles({
   },
   contactButtons: {
     marginBottom: 25,
-    width: 250
+    width: 250,
   },
   contactIcon: {
     width: 80,
@@ -31,9 +34,20 @@ const useStyles = makeStyles({
 const Contact = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="contact">
       <h1>contact</h1>
-      <Grid container direction="column" justify="center" alignItems="center">
+      <TrackVisibility once partialVisibility>
+        {({ isVisible }) => <ContactButtons isVisible={isVisible} />}
+      </TrackVisibility>
+    </div>
+  );
+};
+
+const ContactButtons = (props) => {
+  const classes = useStyles();
+  return (
+    <Grid container direction="column" justify="center" alignItems="center">
+      <Slide direction="right" in={props.isVisible} timeout={1000}>
         <Button
           variant="contained"
           startIcon={
@@ -43,6 +57,8 @@ const Contact = () => {
         >
           <h1>Email</h1>
         </Button>
+      </Slide>
+      <Slide direction="left" in={props.isVisible} timeout={1000}>
         <Button
           variant="contained"
           startIcon={
@@ -52,6 +68,8 @@ const Contact = () => {
         >
           <h1>GitHub</h1>
         </Button>
+      </Slide>
+      <Slide direction="right" in={props.isVisible} timeout={1000}>
         <Button
           variant="contained"
           startIcon={
@@ -61,8 +79,8 @@ const Contact = () => {
         >
           <h1>LinkedIn</h1>
         </Button>
-      </Grid>
-    </div>
+      </Slide>
+    </Grid>
   );
 };
 
