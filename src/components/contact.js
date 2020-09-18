@@ -35,7 +35,7 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <div className={classes.root} id="contact">
-      <h1>contact</h1>
+      <h1>Contact</h1>
       <TrackVisibility once partialVisibility>
         {({ isVisible }) => <ContactButtons isVisible={isVisible} />}
       </TrackVisibility>
@@ -54,6 +54,7 @@ const ContactButtons = (props) => {
             <EmailIcon color="primary" className={classes.contactIcon} />
           }
           className={classes.contactButtons}
+          href="mailto:antonnioj@gmail.com"
         >
           <h1>Email</h1>
         </Button>
@@ -65,6 +66,7 @@ const ContactButtons = (props) => {
             <GitHubIcon color="primary" className={classes.contactIcon} />
           }
           className={classes.contactButtons}
+          href="https://github.com/AntonnioJones"
         >
           <h1>GitHub</h1>
         </Button>
@@ -76,6 +78,7 @@ const ContactButtons = (props) => {
             <LinkedInIcon color="primary" className={classes.contactIcon} />
           }
           className={classes.contactButtons}
+          href="https://www.linkedin.com/in/antonio-jones-2ab8607b/"
         >
           <h1>LinkedIn</h1>
         </Button>

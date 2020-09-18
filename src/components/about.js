@@ -5,8 +5,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Slide from "@material-ui/core/Slide";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 //react-on-screen
 import TrackVisibility from "react-on-screen";
+import { CenterFocusStrong } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
@@ -31,10 +36,20 @@ const useStyles = makeStyles({
     paddingRight: 15,
     width: "100%",
     textAlign: "center",
+    alignContent: "center"
   },
   progressBars: {
     width: "100%",
     height: 20,
+  },
+  card: {
+    maxWidth: 300,
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto"
+  },
+  cardMedia: {
+    height: 260,   
   },
 });
 
@@ -52,7 +67,7 @@ const About = () => {
           id="about"
         >
           <ProfileSummary isVisible={isVisible} />
-          <ProgressBars isVisible={isVisible}/>
+          <ProgressBars isVisible={isVisible} />
         </Grid>
       )}
     </TrackVisibility>
@@ -72,18 +87,23 @@ const ProfileSummary = (props) => {
       >
         <div className={classes.about}>
           <h1 className={classes.headers}>About</h1>
-          <img
-            src="https://www.w3schools.com/images/picture.jpg"
-            alt="Profile"
-          ></img>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              image="https://media-exp1.licdn.com/dms/image/C4D03AQFUKwhXBcEXow/profile-displayphoto-shrink_400_400/0?e=1605744000&v=beta&t=rZn2-xGWnh-tnEH8rzbsu_2gxv5lEQ5KfiR-ceR2MKs"
+            />
+          </Card>
           <div>
-            <h4>Education: </h4>
+            <h5 className={classes.info}>
+              Education: Bachlor of Science(Computer Science) from Coastal
+              Carolina University
+            </h5>
             <p className={classes.info}>
-              Coastal Carolina University: bachlor of science(Computer Science)
-            </p>
-            <p className={classes.info}>
-              I'm a full stack developer based in Atlanta, Georgia. I love
-              creating responsive and dynamic web applications.
+              I am a software developer that specalizes full stack web
+              development. I live in Atlanta Georgia but can work remotely. I
+              love creating responsive and dynamic web applications. My other
+              programming intrest include artifical intelligence, VR, and game
+              development.
             </p>
           </div>
           <p id="about info"></p>

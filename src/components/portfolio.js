@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
+import Link from "@material-ui/core/Link";
 
 //react-on-screen
 import TrackVisibility from "react-on-screen";
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
     margin: 10,
   },
   cardMedia: {
-    height: 140,
+    height: 200,
   },
 });
 
@@ -52,26 +53,38 @@ const Portfolio = () => {
 const PortfolioInfo = (props) => {
   return (
     <Grid container direction="row" justify="center" alignItems="flex-start">
-      <ProjectCard
-        title="Socia Media"
-        summary="A social media app created with Firebase, Node, Express, and React.js"
-        in={props.isVisible}
-      />
-      <ProjectCard
-        title="Education Map"
-        summary="A social media app created with Firebase, Node, Express, and React.js"
-        in={props.isVisible}
-      />
-      <ProjectCard
-        title="Todo App"
-        summary="A social media app created with Firebase, Node, Express, and React.js"
-        in={props.isVisible}
-      />
-      <ProjectCard
-        title="Quote Generator"
-        summary="A social media app created with Firebase, Node, Express, and React.js"
-        in={props.isVisible}
-      />
+      <Link href="https://antonniojones.com/todoapp/index.html">
+        <ProjectCard
+          title="Socia Media"
+          summary="A social media app created with Firebase, Node, Express, and React.js"
+          in={props.isVisible}
+          imageLink=""
+        />
+      </Link>
+      <Link href="https://codepen.io/antonniojones/full/xxGJyWE">
+        <ProjectCard
+          title="Education Map"
+          summary="A social media app created with Firebase, Node, Express, and React.js"
+          in={props.isVisible}
+          imageLink="https://antonniojones.com/images/educationmap.png"
+        />
+      </Link>
+      <Link href="https://antonniojones.com/todoapp/index.html">
+        <ProjectCard
+          title="Todo App"
+          summary="A social media app created with Firebase, Node, Express, and React.js"
+          in={props.isVisible}
+          imageLink="https://antonniojones.com/images/todoApp.png"
+        />
+      </Link>
+      <Link href="https://codepen.io/antonniojones/full/GRJgabL">
+        <ProjectCard
+          title="Quote Generator"
+          summary="A social media app created with Firebase, Node, Express, and React.js"
+          in={props.isVisible}
+          imageLink="https://antonniojones.com/images/randomQuoteGenerator.png"
+        />
+      </Link>
     </Grid>
   );
 };
@@ -85,7 +98,7 @@ const ProjectCard = (props) => {
         <CardActionArea>
           <CardMedia
             className={classes.cardMedia}
-            image="../images/no-img.png"
+            image={props.imageLink}
             title={props.title}
           />
           <CardContent>
