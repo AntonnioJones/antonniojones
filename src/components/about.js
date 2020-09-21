@@ -6,12 +6,9 @@ import Grid from "@material-ui/core/Grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Slide from "@material-ui/core/Slide";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 //react-on-screen
 import TrackVisibility from "react-on-screen";
-import { CenterFocusStrong } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
@@ -102,7 +99,7 @@ const ProfileSummary = (props) => {
               I am a software developer that specalizes full stack web
               development. I live in Atlanta Georgia but can work remotely. I
               love creating responsive and dynamic web applications. My other
-              programming intrest include artifical intelligence, VR, and game
+              programming interest include artifical intelligence, VR, and game
               development.
             </p>
           </div>

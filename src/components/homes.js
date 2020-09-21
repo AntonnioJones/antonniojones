@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
+import Image from '../images/Binary-Code-Background.gif';
+
 //material UI
 import Container from "@material-ui/core/Container";
 import Fade from "@material-ui/core/Fade";
@@ -11,9 +13,14 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textAlign: "center",
     minHeight: "100vh",
+    backgroundImage: `url(${Image})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover"
   },
   home: {
     paddingTop: "20%"
+    
   }
 }));
 
@@ -37,5 +44,7 @@ const FadeInHome = (props) => {
     </div>
   );
 };
+
+
 
 export default Home;
