@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 
 //react pages
-import Home from "./components/homes";
 import About from "./components/about";
 import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
@@ -35,13 +34,11 @@ function App() {
             >
               <AppBar position="fixed" color="primary">
                 <Toolbar>
-                  <Button color="inherit" href="#home">Home</Button>
-                  <Button color="inherit" href="#about">About</Button>
+                  <Button color="inherit" href="#about">Home</Button>
                   <Button color="inherit" href="#portfolio">Portfolio</Button>
                   <Button color="inherit" href="#contact">Contact</Button>
                 </Toolbar>
               </AppBar>
-              <Home />
               <About />
               <Portfolio />
               <Contact />

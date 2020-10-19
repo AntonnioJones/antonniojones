@@ -1,6 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
+//images
+import socialMediaImage from '../images/socialMedia.png';
+import educationMapImage from '../images/educationmap.png';
+import randomQuoteGeneratorImage from '../images/randomQuoteGenerator.png';
+import todoAppImage from '../images/todoApp.png';
+
 //material UI
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -56,9 +62,9 @@ const PortfolioInfo = (props) => {
       <Link href="https://antonniojones.com/todoapp/index.html">
         <ProjectCard
           title="Socia Media"
-          summary="A social media app created with Firebase, Node, Express, and React.js"
+          summary="A social media app created with Firebase, Node, and React.js"
           in={props.isVisible}
-          imageLink=""
+          imageLink={socialMediaImage}
         />
       </Link>
       <Link href="https://codepen.io/antonniojones/full/xxGJyWE">
@@ -66,7 +72,7 @@ const PortfolioInfo = (props) => {
           title="Education Map"
           summary="A social media app created with Firebase, Node, Express, and React.js"
           in={props.isVisible}
-          imageLink="https://antonniojones.com/images/educationmap.png"
+          imageLink={educationMapImage}
         />
       </Link>
       <Link href="https://antonniojones.com/todoapp/index.html">
@@ -74,7 +80,7 @@ const PortfolioInfo = (props) => {
           title="Todo App"
           summary="A social media app created with Firebase, Node, Express, and React.js"
           in={props.isVisible}
-          imageLink="https://antonniojones.com/images/todoApp.png"
+          imageLink={todoAppImage}
         />
       </Link>
       <Link href="https://codepen.io/antonniojones/full/GRJgabL">
@@ -82,7 +88,7 @@ const PortfolioInfo = (props) => {
           title="Quote Generator"
           summary="A social media app created with Firebase, Node, Express, and React.js"
           in={props.isVisible}
-          imageLink="https://antonniojones.com/images/randomQuoteGenerator.png"
+          imageLink={randomQuoteGeneratorImage}
         />
       </Link>
     </Grid>
