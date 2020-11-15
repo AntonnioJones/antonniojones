@@ -59,7 +59,7 @@ const Portfolio = () => {
 const PortfolioInfo = (props) => {
   return (
     <Grid container direction="row" justify="center" alignItems="flex-start">
-      <Link href="https://antonniojones.com/todoapp/index.html">
+      <Link href="https://master.djrwddtlo0qso.amplifyapp.com/index.html">
         <ProjectCard
           title="Socia Media"
           summary="A social media app created with Firebase, Node, and React.js"
@@ -75,7 +75,7 @@ const PortfolioInfo = (props) => {
           imageLink={educationMapImage}
         />
       </Link>
-      <Link href="https://antonniojones.com/todoapp/index.html">
+      <Link href="https://codepen.io/antonniojones/full/RwRdNgb">
         <ProjectCard
           title="Todo App"
           summary="A social media app created with Firebase, Node, Express, and React.js"
