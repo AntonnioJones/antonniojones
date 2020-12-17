@@ -87,7 +87,7 @@ const ProfileSummary = (props) => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image="https://media-exp1.licdn.com/dms/image/C4D03AQFUKwhXBcEXow/profile-displayphoto-shrink_400_400/0?e=1605744000&v=beta&t=rZn2-xGWnh-tnEH8rzbsu_2gxv5lEQ5KfiR-ceR2MKs"
+              image="https://media-exp1.licdn.com/dms/image/C4D03AQFUKwhXBcEXow/profile-displayphoto-shrink_400_400/0/1578711063858?e=1613606400&v=beta&t=X85rWKv0M9LDkLrvs1dq4THs16sxwr3ESffO3ogT-_Q"
             />
           </Card>
           <div>
