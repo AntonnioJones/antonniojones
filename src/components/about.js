@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Image from '../images/antonniojonespic.png';
 
 //material UI
 import Grid from "@material-ui/core/Grid";
@@ -87,7 +88,7 @@ const ProfileSummary = (props) => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image="https://media-exp1.licdn.com/dms/image/C4D03AQFUKwhXBcEXow/profile-displayphoto-shrink_400_400/0/1578711063858?e=1613606400&v=beta&t=X85rWKv0M9LDkLrvs1dq4THs16sxwr3ESffO3ogT-_Q"
+              image={Image}
             />
           </Card>
           <div>
