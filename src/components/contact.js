@@ -78,7 +78,7 @@ const ContactButtons = (props) => {
             <LinkedInIcon color="primary" className={classes.contactIcon} />
           }
           className={classes.contactButtons}
-          href="https://www.linkedin.com/in/antonio-jones-2ab8607b/"
+          href="www.linkedin.com/in/antonniojones"
         >
           <h1>LinkedIn</h1>
         </Button>
